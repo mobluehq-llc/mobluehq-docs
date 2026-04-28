@@ -1,0 +1,45 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+const title = frontmatter.title + " · blueForge docs";
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {frontmatter.description && (
+      <meta name="description" content={frontmatter.description} />
+    )}
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="/">blueForge docs</a>
+      <nav>
+        <a href="/getting-started/install">Get started</a>
+        <a href="/concepts/smith-and-apprentice">Concepts</a>
+        <a href="/how-to/set-up-providers">How-to</a>
+        <a href="/reference/glossary">Reference</a>
+        <a href="https://mobluehq-status.pages.dev">Status</a>
+      </nav>
+    </header>
+    <main class="doc">
+      <h1>{frontmatter.title}</h1>
+      <article class="prose">
+        <slot />
+      </article>
+    </main>
+    <footer class="foot">
+      <a href="https://github.com/mobluehq-llc">MOBLUEHQ on GitHub</a>
+    </footer>
+  </body>
+</html>
