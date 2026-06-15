@@ -178,3 +178,21 @@ nav a:hover {
 .muted {
   color: var(--muted);
 }
+
+.callout {
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.callout-draft {
+  background: rgba(255, 180, 80, 0.12);
+  border-color: rgba(255, 180, 80, 0.35);
+}
+
+.callout-internal {
+  background: rgba(94, 177, 255, 0.08);
+  border-color: rgba(94, 177, 255, 0.25);
+}

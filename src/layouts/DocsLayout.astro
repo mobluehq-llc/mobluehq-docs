@@ -64,6 +64,10 @@ const nav = [
       { href: "/reference/keyboard-shortcuts", text: "Keyboard shortcuts" },
     ],
   },
+  {
+    label: "Trust",
+    links: [{ href: "/trust", text: "Trust center" }],
+  },
 ];
 
 const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
@@ -87,6 +91,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
         <a href="/concepts/smith-and-apprentice">Concepts</a>
         <a href="/how-to/set-up-providers">How-to</a>
         <a href="/reference/glossary">Reference</a>
+        <a href="/trust">Trust</a>
         <a href="https://mobluehq-status.pages.dev">Status</a>
       </nav>
     </header>
