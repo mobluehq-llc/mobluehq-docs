@@ -10,6 +10,63 @@ interface Props {
 
 const { frontmatter } = Astro.props;
 const title = frontmatter.title + " · blueForge docs";
+
+const nav = [
+  {
+    label: "Quickstart",
+    links: [
+      { href: "/quickstart", text: "Overview" },
+      { href: "/quickstart/blue", text: "Blue" },
+      { href: "/quickstart/bluemoat", text: "blueMoat" },
+      { href: "/quickstart/bluechart", text: "blueChart" },
+      { href: "/quickstart/bluecheck-sdk", text: "blueCheck SDK" },
+      { href: "/quickstart/blueglu", text: "blueGlu" },
+      { href: "/quickstart/slumbernet", text: "slumberNet" },
+    ],
+  },
+  {
+    label: "Getting started",
+    links: [
+      { href: "/getting-started/install", text: "Install blueForge" },
+      { href: "/getting-started/first-dispatch", text: "First dispatch" },
+      { href: "/getting-started/licensing", text: "Activation & licensing" },
+      { href: "/getting-started/beta-known-issues", text: "Beta & known issues" },
+      { href: "/getting-started/support", text: "Support" },
+      { href: "/getting-started/troubleshooting", text: "Troubleshooting" },
+    ],
+  },
+  {
+    label: "Concepts",
+    links: [
+      { href: "/concepts/smith-and-apprentice", text: "Smith & Apprentice" },
+      { href: "/concepts/verification", text: "Verification" },
+      { href: "/concepts/offline-and-privacy", text: "Offline & privacy" },
+      { href: "/concepts/receipt-log", text: "Receipt log" },
+      { href: "/concepts/slumbernet", text: "slumberNet" },
+    ],
+  },
+  {
+    label: "How-to",
+    links: [
+      { href: "/how-to/set-up-providers", text: "Set up providers" },
+      { href: "/how-to/use-council-mode", text: "Council mode" },
+      { href: "/how-to/verify-receipts", text: "Verify receipts" },
+      { href: "/how-to/export-receipts", text: "Export receipts" },
+      { href: "/how-to/report-bugs", text: "Report bugs" },
+    ],
+  },
+  {
+    label: "Reference",
+    links: [
+      { href: "/reference/glossary", text: "Glossary" },
+      { href: "/reference/settings", text: "Settings" },
+      { href: "/reference/verification-block", text: "Verification block" },
+      { href: "/reference/keyboard-shortcuts", text: "Keyboard shortcuts" },
+    ],
+  },
+];
+
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +81,8 @@ const title = frontmatter.title + " · blueForge docs";
   <body>
     <header class="top">
       <a class="brand" href="/">blueForge docs</a>
-      <nav>
+      <nav class="topnav">
+        <a href="/quickstart">Quickstart</a>
         <a href="/getting-started/install">Get started</a>
         <a href="/concepts/smith-and-apprentice">Concepts</a>
         <a href="/how-to/set-up-providers">How-to</a>
@@ -32,12 +90,37 @@ const title = frontmatter.title + " · blueForge docs";
         <a href="https://mobluehq-status.pages.dev">Status</a>
       </nav>
     </header>
-    <main class="doc">
-      <h1>{frontmatter.title}</h1>
-      <article class="prose">
-        <slot />
-      </article>
-    </main>
+    <div class="shell">
+      <aside class="sidebar" aria-label="Documentation">
+        {
+          nav.map((section) => (
+            <div class="sidebar-section">
+              <p class="sidebar-label">{section.label}</p>
+              <ul>
+                {section.links.map((link) => (
+                  <li>
+                    <a
+                      href={link.href}
+                      class:list={[
+                        currentPath === link.href.replace(/\/$/, "") && "active",
+                      ]}
+                    >
+                      {link.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </aside>
+      <main class="doc">
+        <h1>{frontmatter.title}</h1>
+        <article class="prose">
+          <slot />
+        </article>
+      </main>
+    </div>
     <footer class="foot">
       <a href="https://github.com/mobluehq-llc">MOBLUEHQ on GitHub</a>
     </footer>
