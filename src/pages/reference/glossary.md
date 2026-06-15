@@ -6,7 +6,17 @@ description: Named concepts across MOBLUEHQ and blueForge.
 
 **Apprentice** — The agent path that runs tools and edits files. Called out by name so you know when work is not just chat.
 
+**Blue** — The verification substrate: private inference mesh, signed results, shared across MOBLUEHQ products. See [Blue quickstart](/quickstart/blue).
+
+**blueChart** — Evidence packs for utilization review with signed, offline-verifiable output. See [blueChart quickstart](/quickstart/bluechart).
+
+**blueCheck** — Verification engine and SDK for signed receipts and council flows. See [blueCheck SDK quickstart](/quickstart/bluecheck-sdk).
+
 **blueForge** — The MOBLUEHQ desktop forge product (lowercase b, camel Forge). The app you run locally.
+
+**blueGlu** — On-device chat with citations and visible disagreement. Demo access; see [blueGlu quickstart](/quickstart/blueglu).
+
+**blueMoat** — Prior-art screening with quoted sources and tamper-evident receipts. Customer app: bluemoat-app. See [blueMoat quickstart](/quickstart/bluemoat).
 
 **blueGlued** — MOBLUEHQ term for the glue layer that keeps editor, chat, and tool policy coherent (spelled with a d at the end).
 

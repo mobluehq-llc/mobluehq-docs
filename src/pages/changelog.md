@@ -6,6 +6,7 @@ description: High-level doc site changelog; product changelog lives in release n
 
 ## Docs site
 
+- **2026-06-15** First-customer onboarding: product quickstarts (Blue, blueMoat, blueChart, blueCheck SDK, blueGlu, slumberNet), activation and licensing, offline and privacy, beta and known issues, support expectations, and sidebar navigation.
 - **2026-04-28** Initial public doc scaffold: install, providers, core concepts, glossary, and report flow links.
 
 ## blueForge product
