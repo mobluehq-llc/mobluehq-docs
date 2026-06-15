@@ -67,7 +67,7 @@ Gather:
 - [Activation and licensing](/getting-started/licensing) for Authority traffic
 - Product quickstart for export paths
 
-Contact MOBLUEHQ support for a DPA or subprocessors list if your process requires it.
+See the [Trust center](/trust) for subprocessors, security contact, and vulnerability disclosure. Contact MOBLUEHQ support for a DPA if your process requires it.
 
 ## Next
 

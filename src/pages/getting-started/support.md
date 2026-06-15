@@ -12,7 +12,7 @@ MOBLUEHQ support is **async-first**. We read every report; we do not staff a 24/
 | ------------------------------ | ----------------------------------------------------------------------------------------- |
 | In-product **Report**          | First human reply within **48–72 hours** on business days (US Central bias)               |
 | License or activation blockers | Same window; mark **urgent — cannot activate** in the subject or description              |
-| Security issues                | Use the security contact in your onboarding packet — do not paste exploits in public bugs |
+| Security issues                | [security@mobluehq.com](mailto:security@mobluehq.com) — see [Trust center](/trust); do not paste exploits in public bugs |
 
 Weekends and US holidays may extend the window. Critical outages appear on the [status page](https://mobluehq-status.pages.dev) without waiting for individual replies.
 
